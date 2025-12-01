@@ -28,9 +28,9 @@ const sequelize = new Sequelize(
 async function testarConexao() {
   try {
     await sequelize.authenticate();
-    console.log('✅ Conexão com o banco estabelecida com sucesso.');
+    console.log('Conexão com o banco estabelecida com sucesso.');
   } catch (error) {
-    console.error('❌ Não foi possível conectar ao Supabase:', error);
+    console.error('Não foi possível conectar ao Supabase:', error);
   }
 }
 

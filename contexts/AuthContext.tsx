@@ -25,7 +25,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [token, setToken] = useState<string | null>(null);
 
-  // Ajuste a URL conforme o ambiente (em emulador Android pode ser 10.0.2.2)
   const API = (process.env.EXPO_PUBLIC_API_URL as string) || DEFAULT_API;
 
   useEffect(() => {

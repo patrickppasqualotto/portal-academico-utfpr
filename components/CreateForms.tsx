@@ -23,7 +23,7 @@ export function CreateForms({ type, onBack, onSuccess }: CreateFormsProps) {
   const [formData, setFormData] = useState<{ [key: string]: string }>({});
   const [submitting, setSubmitting] = useState(false);
   const { token } = useAuth();
-  const API = useMemo(() => (process.env.API_URL as string) || 'http://localhost:4000', []);
+  const API = useMemo(() => (process.env.EXPO_PUBLIC_API_URL as string) || 'http://localhost:4000', []);
   const [categoriaOptions, setCategoriaOptions] = useState<Array<{ id: number; nome: string }>>([]);
   const [tipoOptions, setTipoOptions] = useState<Array<{ id: number; nome: string }>>([]);
 
